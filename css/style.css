@@ -1,0 +1,162 @@
+/* || Reset */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  padding: 1rem 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+/* || Global Styles */
+body {
+  font-family: 'Smythe', cursive;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* || Utils */
+.wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* || Header */
+header {
+  background: #000;
+  background-image: linear-gradient(
+      to right,
+      rgba(24, 24, 24, 0.9),
+      rgba(0, 0, 0, 0.1)
+    ),
+    url('/img/header.png');
+  background-position: center;
+  background-size: cover;
+  color: white;
+  padding: 2.2rem 1.5rem 3rem;
+}
+
+header h1 {
+  font-size: 2.4rem;
+  font-weight: 400;
+  margin-bottom: 0.25rem;
+}
+
+header p {
+  font-size: 1.3rem;
+}
+
+/* || Menu */
+.menu {
+  padding: 0 1.5rem;
+}
+
+/* || Menu item */
+.item-container {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 0;
+  border-bottom: 1px solid #d2d2d2;
+}
+
+.item-info-container {
+  margin-right: auto;
+}
+
+.name {
+  font-size: 1.75rem;
+}
+
+.description {
+  font-size: 1.2rem;
+  margin-bottom: 0.25rem;
+  color: rgb(78, 76, 76);
+}
+
+.price {
+  font-size: 1.7rem;
+}
+
+.btn-add {
+  padding: 1.1rem;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid #dedede;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Cart */
+
+.cart {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.cart-title {
+  font-size: 1.9rem;
+  font-weight: 400;
+}
+
+.cart-items {
+  margin-bottom: 1rem;
+}
+
+.cart-item {
+  display: flex;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+
+.cart-item-name {
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-right: 0.5rem;
+}
+
+.btn-remove {
+  margin-right: auto;
+  border: none;
+  background-color: transparent;
+  color: rgb(109, 107, 107);
+}
+
+.cart-price {
+  font-size: 1.5rem;
+}
+
+.total-container {
+  border-top: 2px solid #393333;
+  padding: 1rem 0 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-complete {
+  width: 100%;
+  padding: 1.2rem;
+  border: none;
+  background-color: #16db99;
+  color: white;
+  font-weight: 800;
+  font-size: 1.3rem;
+}
