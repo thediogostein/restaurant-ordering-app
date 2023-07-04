@@ -81,6 +81,10 @@ header p {
   margin-right: auto;
 }
 
+.emoji {
+  font-size: 3rem;
+}
+
 .name {
   font-size: 1.75rem;
 }
@@ -105,11 +109,22 @@ header p {
   justify-content: center;
 }
 
+object {
+  pointer-events: none;
+}
 /* Cart */
 
 .cart {
   padding: 1.5rem;
   text-align: center;
+}
+
+.cart {
+  display: none;
+}
+
+.cart.show {
+  display: block;
 }
 
 .cart-title {
@@ -151,12 +166,48 @@ header p {
   justify-content: space-between;
 }
 
-.btn-complete {
+.btn {
   width: 100%;
-  padding: 1.2rem;
+  padding: 1rem;
   border: none;
   background-color: #16db99;
   color: white;
   font-weight: 800;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
+}
+
+/* || Cart confirmation */
+.confirmation {
+  display: none;
+  background-color: #ecfdf5;
+  color: #065f46;
+  font-size: 1.5rem;
+  padding: 3rem;
+}
+
+.confirmation.show {
+  display: block;
+}
+
+/* || Dialog -- Modal */
+dialog {
+  padding: 2rem 1.5rem;
+  /* text-align: center; */
+  width: 90%;
+  max-width: 550px;
+}
+
+dialog h2 {
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+}
+
+dialog input {
+  width: 100%;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+}
+
+dialog button {
+  width: 100%;
 }

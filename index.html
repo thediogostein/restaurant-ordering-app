@@ -10,13 +10,9 @@
       href="https://fonts.googleapis.com/css2?family=Smythe&display=swap"
       rel="stylesheet"
     />
-    <!-- Font awesome -->
-    <script
-      src="https://kit.fontawesome.com/5d82bdb10b.js"
-      crossorigin="anonymous"
-    ></script>
+
     <!-- JS -->
-    <script src="js/app.js"></script>
+    <script src="js/app.js" type="module" defer></script>
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css" />
     <title>Restaurant Ordering App</title>
@@ -28,8 +24,8 @@
         <p>The best burgers and pizzas in town.</p>
       </header>
 
-      <section class="menu">
-        <div class="item-container">
+      <section class="menu" id="menu-el">
+        <!-- <div class="item-container">
           <img src="img/pizza.png" alt="a slice of pizza" />
           <div class="item-info-container">
             <div class="name">Pizza</div>
@@ -63,29 +59,83 @@
 
           <button class="btn-add">
             <i class="fa-solid fa-plus"></i>
+          </button>
+        </div> -->
+      </section>
+
+      <!-- Cart -->
+      <section class="cart" id="cart-el">
+        <div class="cart-container" id="cart">
+          <h2 class="cart-title">Your order</h2>
+          <div class="cart-items" id="cart-items">
+            <!-- <div class="cart-item">
+              <h3 class="cart-item-name">Pizza</h3>
+              <button class="btn-remove">remove</button>
+              <p class="cart-price">#14</p>
+            </div> -->
+            <!-- <div class="cart-item">
+              <h3 class="cart-item-name">Beer</h3>
+              <button class="btn-remove">remove</button>
+              <p class="cart-price">#12</p>
+            </div> -->
+          </div>
+          <div class="total-container">
+            <h3 class="cart-item-name">Total price:</h3>
+            <p class="cart-price" id="total-price">$26</p>
+          </div>
+          <button class="btn btn-complete" data-role="complete-order">
+            Complete order
           </button>
         </div>
       </section>
-      <section class="cart">
-        <h2 class="cart-title">Your order</h2>
-        <div class="cart-items">
-          <div class="cart-item">
-            <h3 class="cart-item-name">Pizza</h3>
-            <button class="btn-remove">remove</button>
-            <p class="cart-price">#14</p>
-          </div>
-          <div class="cart-item">
-            <h3 class="cart-item-name">Beer</h3>
-            <button class="btn-remove">remove</button>
-            <p class="cart-price">#12</p>
-          </div>
-        </div>
-        <div class="total-container">
-          <h3 class="cart-item-name">Total price:</h3>
-          <p class="cart-price">$26</p>
-        </div>
-        <button class="btn-complete">Complete order</button>
+
+      <!-- Confirmation -->
+      <section class="confirmation" id="confirmation-el">
+        <p>Thanks, James! Your order is on its way!</p>
       </section>
+
+      <dialog>
+        <form>
+          <h2>Enter card details</h2>
+          <section>
+            <label for="cc-name">Name</label>
+            <input
+              id="cc-name"
+              name="cc-name"
+              autocomplete="cc-name"
+              type="text"
+              placeholder="Your full name"
+              pattern="[\p{L} \-\.]+"
+            />
+          </section>
+
+          <section>
+            <label for="cc-number">Card number</label>
+            <input
+              id="cc-number"
+              name="cc-number"
+              autocomplete="cc-number"
+              inputmode="numeric"
+              pattern="[\d ]{10,30}"
+              placeholder="1111 2222 3333 4444"
+            />
+          </section>
+
+          <section>
+            <label for="cc-csc">CVV</label>
+            <input
+              id="cc-csc"
+              name="cc-csc"
+              autocomplete="cc-csc"
+              inputmode="numeric"
+              maxlength="3"
+              placeholder="123"
+            />
+          </section>
+
+          <button type="submit" class="btn" data-role="pay">Pay</button>
+        </form>
+      </dialog>
     </div>
   </body>
 </html>
